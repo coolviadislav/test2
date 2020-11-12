@@ -1,6 +1,10 @@
 <?php
 	include('lib/simple_html_dom.php');
-	
+	/*
+	Запись html страницы в переменную 
+	поиск на странице данных авто 
+	вывод в json
+	*/
 	$html = file_get_html("https://olimp-cars.ru/auto");
 	$cars = [];
 	foreach ($html->find('.item') as $key => $value) {
